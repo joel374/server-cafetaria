@@ -20,10 +20,8 @@ app.use("/user", userRouter);
 app.use("/menu", menuRouter);
 app.use("/order", orderRouter);
 
-app.get("/", (req, res, next) => {
-  res.status(200).json({
-    message: "Hello, API!",
-  });
+app.get("/", (req, res) => {
+  res.send("Hello, API!");
 });
 
 app.listen(PORT, (err) => {
